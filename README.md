@@ -13,14 +13,14 @@ This project implements an automated monitoring system for broiler flock distrib
 
 ## System Architecture
 The pipeline processes video feeds to extract behavioral metrics:
-1.  [cite_start]**Object Detection:** YOLOv8 identifies broilers in the frame.
-2.  [cite_start]**Spatial Coordinates:** Extracts centroids of bounding boxes ($x_b, y_b$).
-3.  [cite_start]**Cluster Analysis:** Applies DBSCAN to detect huddling behaviors.
-4.  [cite_start]**CIBB Calculation:** Computes the ratio of the union area to the perimeter of bounding boxes.
+1.  **Object Detection:** YOLOv8 identifies broilers in the frame.
+2.  **Spatial Coordinates:** Extracts centroids of bounding boxes ($x_b, y_b$).
+3.  **Cluster Analysis:** Applies DBSCAN to detect huddling behaviors.
+4.  **CIBB Calculation:** Computes the ratio of the union area to the perimeter of bounding boxes.
 
 ## Key Features
 * **Real-time Detection:** High-FPS inference using Ultralytics YOLOv8.
-* [cite_start]**Density Analysis:** Quantifiable clustering metrics (CIBB) correlated with temperature/humidity.
+* **Density Analysis:** Quantifiable clustering metrics (CIBB) correlated with temperature/humidity.
 * **Containerized Deployment:** Docker support for easy deployment on edge devices (Coming Soon).
 
 ## Tech Stack
