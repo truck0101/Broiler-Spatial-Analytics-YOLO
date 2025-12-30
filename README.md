@@ -6,24 +6,24 @@ Real-time poultry flock distribution monitoring system using YOLOv8 and DBSCAN. 
 ![YOLOv8](https://img.shields.io/badge/YOLO-v8-green)
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
-## 📌 Abstract
+## Abstract
 This project implements an automated monitoring system for broiler flock distribution in poultry houses using Computer Vision and Clustering techniques. Based on the methodology proposed by Chiang et al. (2021) [1], the system utilizes **YOLOv8** for object detection and **DBSCAN** for spatial clustering analysis.
 
 [cite_start]Key metric implemented: **Cluster Index of Bounding Box (CIBB)**, which indicates the spatial distribution and potential thermal comfort of the flock[cite: 9, 11].
 
-## 🏗 System Architecture
+## System Architecture
 The pipeline processes video feeds to extract behavioral metrics:
-1.  [cite_start]**Object Detection:** YOLOv8 identifies broilers in the frame[cite: 77].
-2.  [cite_start]**Spatial Coordinates:** Extracts centroids of bounding boxes ($x_b, y_b$)[cite: 119].
-3.  [cite_start]**Cluster Analysis:** Applies DBSCAN to detect huddling behaviors[cite: 157].
-4.  [cite_start]**CIBB Calculation:** Computes the ratio of the union area to the perimeter of bounding boxes[cite: 176].
+1.  [cite_start]**Object Detection:** YOLOv8 identifies broilers in the frame.
+2.  [cite_start]**Spatial Coordinates:** Extracts centroids of bounding boxes ($x_b, y_b$).
+3.  [cite_start]**Cluster Analysis:** Applies DBSCAN to detect huddling behaviors.
+4.  [cite_start]**CIBB Calculation:** Computes the ratio of the union area to the perimeter of bounding boxes.
 
-## 🚀 Key Features
+## Key Features
 * **Real-time Detection:** High-FPS inference using Ultralytics YOLOv8.
-* [cite_start]**Density Analysis:** Quantifiable clustering metrics (CIBB) correlated with temperature/humidity[cite: 11].
+* [cite_start]**Density Analysis:** Quantifiable clustering metrics (CIBB) correlated with temperature/humidity.
 * **Containerized Deployment:** Docker support for easy deployment on edge devices (Coming Soon).
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Language:** Python 3.9
 * **CV Engine:** OpenCV, Ultralytics YOLOv8
 * **ML Algorithm:** Scikit-learn (DBSCAN)
